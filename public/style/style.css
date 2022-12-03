@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+:root {
+  --blue-color: #39add7;
+  --purple: #8e44ad;
+  --light-bg: #f5f5f5;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+*::-moz-selection {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+
+html, body {
+  height: 100vh !important;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+#navbarDiv #navLinks {
+  font-size: 1.3rem;
+  background-image: linear-gradient(to right, var(--blue-color), var(--blue-color) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+#navbarDiv #navLinks:before {
+  content: "";
+  background: var(--blue-color);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#navbarDiv #navLinks:hover {
+  background-position: 0;
+}
+#navbarDiv #navLinks:hover::before {
+  width: 100%;
+}
+
+.card-body p {
+  color: white;
+}
+.card-body p span {
+  color: var(--blue-color);
+}
+
+.card {
+  background-color: transparent !important;
+}
+
+.card-title {
+  color: white !important;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  margin: 2rem 0;
+}
+
+.details {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.details p {
+  color: var(--purple);
+  font-size: 1.5rem;
+}
+.details p:hover {
+  transform: scale(1.5);
+  background-color: var(--light-bg);
+}
+.details p span {
+  color: var(--blue-color);
+}
+.details h1 {
+  font-size: 4rem;
+  color: var(--purple);
+}
+
+.createForm {
+  color: var(--blue-color);
+  margin-top: 2rem;
+}
+.createForm label {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.createForm button {
+  height: 4rem;
+  width: 7rem;
+  font-size: 1.5rem;
+}
+.createForm h1 {
+  text-align: center;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

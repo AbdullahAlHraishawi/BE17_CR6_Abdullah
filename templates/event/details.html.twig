@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div class="image">
+            <img src="{{ events.image }}" alt="{{ events.name }}">
+        </div>
+        <div class="details">
+            <h1>{{ events.name }}</h1>
+            <br>
+            <p>Date & Time: <span>{{ events.dateAndTime|date('l M.dS.Y G:i T')}}</span></p>
+            <p>Capacity: <span>{{ events.capacity }}</span> People</p>
+            <p>Event Type: <span>{{ events.type }}</span></p>
+            <p>Contact E-Mail: <span>{{ events.eMail }}</span></p>
+            <p>Contact Phone Number: <span>{{ events.phoneNumber }}</span></p>
+            <p>Address: <span>{{ events.address }}</span></p>
+            <p>Website: <span>{{ events.url }}</span></p>
+            <p>Description: <span>{{ events.description }}</span></p>
+        </div>
+    </div>
+{% endblock %}

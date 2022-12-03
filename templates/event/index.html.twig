@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Big Events{% endblock %} 
+
+{% block body %}
+
+    <div class="container mt-5">
+        <div class="row row-cols-3">
+            {% for event in events %}
+                <div class="card me-4 mb-4 border border-1 shadow" style="width: 18rem">
+                    <img
+                        src="{{ event.image }}"
+                        class="card-img-top"
+                        alt="{{ event.name }}"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.name }}</h5>
+                        <p>Date and Time: <span>{{ event.dateAndTime|date('l M.dS.Y G:i T')}}</span></p>
+                        <p>Capacity: <span>{{ event.capacity }}</span> People</p>
+                        <p class="card-text">
+                            Description: <span>{{ event.description }}</span>
+                        </p>
+                        <a href="/details/{{ event.id }}" class="btn btn-primary me-3">More Details</a>
+                        <a href="/edit/{{ event.id }}" class="btn btn-warning">Update</a>
+                        <a href="/delete/{{ event.id }}" class="btn btn-danger mt-3">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
